@@ -1,0 +1,23 @@
+<header>
+  <nav class="navbar navbar-expand-sm bg-primary navbar-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <!--  <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLinkActive="active-link" (click)="onNavclick('/home')">Home</a>
+        <a class="nav-item nav-link" routerLinkActive="active-link" (click)="onNavclick('/services')">Services</a>
+        <a class="nav-item nav-link" routerLinkActive="active-link" (click)="onNavclick('/aboutus')">About us</a>
+        <a class="nav-item nav-link" routerLinkActive="active-link" (click)="onNavclick('/contactus')">Contact Us</a>
+      </div> -->
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLinkActive="active-link" [routerLink]="['/home']">Home</a>
+        <a class="nav-item nav-link" routerLinkActive="active-link" [routerLink]="['/services']">Services</a>
+        <a class="nav-item nav-link" routerLinkActive="active-link" [routerLink]="['/aboutus']">About us</a>
+        <a class="nav-item nav-link" routerLinkActive="active-link" [routerLink]="['/contactus']">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+</header>

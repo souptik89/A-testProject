@@ -1,0 +1,15 @@
+<h3> services</h3>
+
+<p>Please input your ID Below</p>
+<app-form-component></app-form-component>
+
+<div *ngIf="data.showdata.length">
+    <div *ngFor="let showdata of data.showdata">
+
+        <h3>Result:<span>{{showdata.id}}</span> <span>{{showdata.title}}</span></h3>
+    </div>
+</div>
+<div *ngIf="!data.showdata.length">
+    <p>id = {{data.showdata.id}}</p>
+    <p>description = {{data.showdata.title}}</p>
+</div>

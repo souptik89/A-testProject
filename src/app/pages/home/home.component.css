@@ -1,0 +1,13 @@
+.banner {
+  height: calc(100vh - 56px);
+}
+
+.banner .carousel,
+.banner .carousel-inner {
+  height: 100%;
+}
+
+.banner .carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
