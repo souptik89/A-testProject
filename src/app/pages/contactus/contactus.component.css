@@ -1,0 +1,10 @@
+.contact-body{position: relative;}
+.res-alert{position: absolute;top: 5%;left: 50%;transform: translateX(-50%);width: 500px; height: 400px;}
+.alert-wrap{
+    background-color: rgba(33, 33, 33, 0.39);
+    position: relative;
+   padding: 40px;
+}
+.res-alert .close{position: absolute;right: 20px;top: 20px;}
+.res-alert .result-data {background-color: #fff;padding: 20px;}
+.res-alert .result-data p{font-size: 15px;color: #303030;}

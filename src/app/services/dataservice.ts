@@ -4,10 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
-  public showdata: any;
-  public datalist: any = [];
+  public getdata: any;
+  public datalist: Array<{ name: string, email: string, phone: number }>;
   constructor() {
-    this.showdata = null;
+    this.getdata = null;
+    this.datalist = [];
   }
 
 }
