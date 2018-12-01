@@ -16,6 +16,8 @@ import { ContactusComponent } from './pages/contactus/contactus.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormComponent } from './components/form-component/form-component';
 import { FValidComponent } from './components/f-valid/f-valid.component';
+import { DataService } from './services/dataservice';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +37,7 @@ import { FValidComponent } from './components/f-valid/f-valid.component';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [
     AppComponent,
     HeaderComponent,

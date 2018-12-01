@@ -8,6 +8,7 @@ import { DataService } from '../../services/dataservice';
 })
 export class FValidComponent implements OnInit {
   public fgroup: FormGroup;
+
   constructor(private fbuild: FormBuilder, private dataserv: DataService) {
     this.fgroup = fbuild.group({
       "name": [null, Validators.compose([Validators.required, Validators.minLength(5)])],
@@ -18,6 +19,7 @@ export class FValidComponent implements OnInit {
   public formsubmit(value) {
     console.log(value);
     this.dataserv.datalist.push(value);
+
   }
   ngOnInit() {
   }

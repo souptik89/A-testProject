@@ -1,4 +1,4 @@
-<form [FormGroup]="fgroup" (ngSubmit)="formsubmit(fgroup.value)">
+<form [formGroup]="fgroup" (ngSubmit)="formsubmit(fgroup.value)">
   <div>
     <label>Enter Name:</label>
     <input type="text" formControlName="name" />

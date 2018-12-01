@@ -10,21 +10,21 @@ import { DataService } from '../../services/dataservice';
 })
 export class FormComponent implements OnInit {
   public model: any;
-  constructor(private callajax: AjaxService, private getdata: DataService) {
+  constructor(private callajax: AjaxService, private showdata: DataService) {
     this.model = {};
     this.model.dataid = " ";
   }
   public getinformation() {
     this.callajax.get("http://jsonplaceholder.typicode.com/todos/" + this.model.dataid).then((data) => {
-      if (Object.keys(data).length === 0) {
-        this.getdata.showdata = null;
-        console.log(this.getdata.showdata);
+      this.showdata.getdata = data;
+      if (Object.keys(this.showdata.getdata).length === 0) {
+        this.showdata.getdata = 'data not available!';
       } else {
-        this.getdata.showdata = data;
-        console.log(this.getdata.showdata);
+        this.showdata.getdata = data;
+        console.log(this.showdata.getdata);
       }
     }).catch(() => {
-      this.getdata.showdata = null;
+      this.showdata.getdata = 'data not received! Please try again.';
     });
   }
   ngOnInit() {
