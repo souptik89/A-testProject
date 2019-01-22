@@ -6,9 +6,11 @@ import { Injectable } from '@angular/core';
 export class DataService {
   public getdata: any;
   public datalist: Array<{ name: string, email: string, phone: number }>;
+  public wData: any;
   constructor() {
-    this.getdata = null;
     this.datalist = [];
+    this.wData = [];
+    this.getdata = {};
   }
 
 }

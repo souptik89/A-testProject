@@ -1,10 +1,10 @@
-.contact-body{position: relative;}
-.res-alert{position: absolute;top: 5%;left: 50%;transform: translateX(-50%);width: 500px; height: 400px;}
+.contact-body{position: relative;height:600px;}
+.res-alert{position: absolute;top:50%;left: 50%;transform: translate(-50%,-50%);width: 600px; min-height: 400px;z-index: 100;}
 .alert-wrap{
-    background-color: rgba(33, 33, 33, 0.39);
     position: relative;
-   padding: 40px;
+    background-color: #dddddd;
+    padding: 5px 20px 20px;
 }
-.res-alert .close{position: absolute;right: 20px;top: 20px;}
-.res-alert .result-data {background-color: #fff;padding: 20px;}
+.res-alert .close{position: absolute;right: 15px;top: 9px;font-size:1.2rem;float: none;}
+.res-alert .result-data {background-color: #fff;padding: 20px;height: 300px;}
 .res-alert .result-data p{font-size: 15px;color: #303030;}

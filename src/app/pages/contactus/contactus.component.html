@@ -1,18 +1,24 @@
-<div class="contact-body">
-  <p>
-    Contact us!
-  </p>
-  <p>Please provide your information, We will contact you.</p>
-  <app-f-valid></app-f-valid>
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="contact-body">
+          <h4>Please provide your information, We will contact you.</h4>
+          <app-f-valid></app-f-valid>
 
-  <div class="res-alert" *ngIf="showAlert">
-    <div class="alert-wrap">
-      <span class="close" (click)="closeAlert()">Close</span>
-      <div class="result-data" *ngFor="let d of inputData">
-        <p>Name:{{d.name}}</p>
-        <p>Email:{{d.email}}</p>
-        <p>Phone:{{d.phone}}</p>
+          <div class="res-alert" *ngIf="!inputData.length == 0">
+            <div class="alert-wrap">
+              <span class="close" (click)="closeAlert()">Close</span>
+              <h3>Alert title</h3>
+              <div class="result-data" *ngFor="let d of inputData">
+                <p>Name:{{d.name}}</p>
+                <p>Email:{{d.email}}</p>
+                <p>Phone:{{d.phone}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>

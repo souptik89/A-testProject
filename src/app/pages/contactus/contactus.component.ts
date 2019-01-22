@@ -8,19 +8,17 @@ import { ArrayType } from '@angular/compiler';
   styleUrls: ['./contactus.component.css']
 })
 export class ContactusComponent implements OnInit {
-  public inputData = null;
-  showAlert: boolean = false;
+  public inputData = [];
+
   constructor(public indata: DataService) {
-
     this.inputData = this.indata.datalist;
-    this.showAlert = true;
-
   }
 
   ngOnInit() {
 
   }
   closeAlert() {
-    this.showAlert = !this.showAlert;
+    this.indata.datalist = [];
+    this.inputData = this.indata.datalist;
   }
 }

@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormComponent } from './components/form-component/form-component';
 import { FValidComponent } from './components/f-valid/f-valid.component';
 import { DataService } from './services/dataservice';
+import { ReactFormComponent } from './components/react-form/react-form.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { DataService } from './services/dataservice';
     AboutusComponent,
     ContactusComponent,
     FormComponent,
-    FValidComponent
+    FValidComponent,
+    ReactFormComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
@@ -42,10 +44,7 @@ import { DataService } from './services/dataservice';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
-    ServicesComponent,
-    AboutusComponent,
-    ContactusComponent]
+  ]
 })
 export class AppModule {
   constructor(router: Router) { }
