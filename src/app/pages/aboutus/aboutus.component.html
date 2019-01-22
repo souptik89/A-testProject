@@ -1,3 +1,25 @@
-<p>
-  aboutus page works!
-</p>
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <h3>Let see weather report</h3>
+        <p>Please type city name:</p>
+        <form>
+          <input type="text" name="city" [(ngModel)]="cityname">
+          <button (click)="getweatherdata()">submit</button>
+        </form>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-12" *ngIf="!weatherData ==0">
+        <div class="result">
+          <p>city name: {{weatherData.city.name}}</p>
+          <p>Temparature(Day): {{weatherData.list[0].temp.day}}</p>
+          <p>Temparature(Night): {{weatherData.list[0].temp.night}}</p>
+          <p>Sky: {{weatherData.list[0].weather[0].description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -3,12 +3,15 @@
 <p>Please input your ID Below</p>
 <app-form-component></app-form-component>
 
-<div *ngIf="resData.getdata.length">
-    <div *ngFor="let res of resData.getdata">
+<div>
+    <button (click)="display()">Display</button>
+</div>
+<div *ngIf="resultData == 0">
+    <div *ngFor="let res of resultData">
         <h3>Result:<span>{{res.id}}</span>-<span>{{res.title}}</span></h3>
     </div>
 </div>
-<div *ngIf="!resData.getdata.length">
-    <p>id = {{resData.getdata.id}}</p>
-    <p>description = {{resData.getdata.title}}</p>
+<div *ngIf="!resultData == 0">
+    <p>id = {{resultData.id}}</p>
+    <p>description = {{resultData.title}}</p>
 </div>
